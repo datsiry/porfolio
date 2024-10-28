@@ -5,6 +5,7 @@ window.onload = function () {
     competences.addEventListener('click',(e)=>{
         location.reload()
     })
+    console.log(url)
     if(url[9] == ''){
         var h1 = document.querySelector("h1.titre")
         var parts = h1.textContent.split('')
