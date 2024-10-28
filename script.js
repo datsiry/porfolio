@@ -1,8 +1,31 @@
-window.onload= function () {
+window.onload = function () {
+    var loc = window.location.href
+    var url = loc.split('/')
     var competences = document.getElementById('competences_link')
     competences.addEventListener('click',(e)=>{
         location.reload()
     })
+    if(url[9] == ''){
+        var h1 = document.querySelector("h1.titre")
+        var parts = h1.textContent.split('')
+        h1.innerHTML = ''
+        parts.forEach(function(e,i){
+            var spans = document.createElement('p')
+            spans.textContent = e
+            spans.setAttribute('class','span')
+            h1.append(spans)
+        })
+        var p = document.querySelector(".Bonjour")
+        var parts = p.textContent.split('')
+        p.innerHTML = ''
+        parts.forEach(function(e,i){
+            let spans = document.createElement('p')
+            spans.textContent = e
+            spans.setAttribute('class','span')
+            p.append(spans)
+        })
+    }
+    
     const circles = document.querySelectorAll('.circle')
     circles.forEach(e => {
         var dots = e.getAttribute('data-dots');
@@ -34,6 +57,5 @@ window.onload= function () {
         navs.style.display="none"
         navs.classList.remove('show')
     })
-    console.log(window.screen.width)
 
 }
