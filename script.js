@@ -1,9 +1,4 @@
 window.onload = function () {
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('*').forEach(element => {
-         element.setAttribute('translate', 'no');
-     });
-    });
     var loc = window.location.href
     var url = loc.split('/')
     var competences = document.getElementById('competences_link')
